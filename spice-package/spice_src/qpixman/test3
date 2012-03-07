@@ -1,0 +1,3 @@
+pixman-pict.c:96: warning: ‘fbCompositeOver_x888x8x8888’ defined but not used
+pixman-pict.c:1087: warning: ‘fbCompositeSrcSrc_nxn’ defined but not used
+pixman-trap.c:89: warning: ‘dump_image’ defined but not used

@@ -1,0 +1,22 @@
+# This file contains the spice source packages. install_spice expects entry in
+# following format.
+# 
+# package name | package src dir | build dependeny list | package config command | package make command.
+
+#QPixman 
+qpixman|qpixman||./autogen.sh --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec | make install 
+
+#QCairo
+qcairo|qcairo||{ export pixman_CFLAGS=-I$TMP/build_spicec/include/qpixman-1 ; export pixman_LIBS=-L$TMP/build_spicec/lib ; ./autogen.sh --disable-xlib --disable-ps --disable-pdf --disable-svg --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec --includedir=$TMP/build_spicec/include --libdir=$TMP/build_spicec/lib ; }|make install 
+#
+#Celt
+celt|celt||./configure --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec --includedir=$TMP/build_spicec/include --libdir=$TMP/build_spicec/lib|make install 
+
+#Spice protocol.
+spice_protocol|spice-protocol-0.6.3||./configure --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec|make install 
+
+#Pixman.
+pixman|pixman-0.19.2||./configure --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec|make install 
+
+#Spice Server and client.
+spice|spice-0.6.3||./configure --prefix=$TMP/build_spicec --exec-prefix=$TMP/build_spicec PROTOCOL_CFLAGS=-I$TMP/build_spicec/include/spice-1 PIXMAN_CFLAGS=-I$TMP/build_spicec/include/pixman-1 PKG_CONFIG_PATH=$TMP/build_spicec/lib/pkgconfig:$TMP/build_spicec/share/pkgconfig|make -C client install 

@@ -1,0 +1,13 @@
+This is the simplest way to build the applet. Using  eclipse do the
+following:
+ Create a new project: 
+    menu : 'File / New / Project' 
+    In the dialog box: select 'Java / Java Project'. Click on 'Next' 
+    Enter a project name, and select the "from existing source" option.
+    Specify  source as trunk/src/JUpload directory (relative to vmrepo checkout folder)
+    Click on 'Finish' Answer 'Yes' to all the 'overwrite' eclipse validation. 
+
+To compile the applet: 
+    Right-click on build.xml file under JUpload projec in eclipse package explorer
+    Select 'Run as' 'Ant Build'
+    The built appet wjhk.jupload.jar can be found in wwwroot subfolder 

@@ -1,0 +1,26 @@
+Before 0.6.0:
+
+test if silent and same frame happens often
+docs on spice.proto
+
+bug 28084 - pixman rendering on powerpoint - need office 2007... - still one issue with scrollbars
+
+driver - Lots of global data need mutex, i.e caches, surfaces_used, etc
+driver - lots of oom? wth?
+
+Put win32 client binary on spice-space.org
+
+----------------------------------
+
+
+surfaces:
+win32 client 16bpp => no ??? whats this? try it
+
+post PCI/marshaller merge:
+pointer to array with @nocopy, still allocates mem_size?? maybe not..??
+
+TODO:
+Test stuff on win7
+Test F14 qemu/spice
+Run whql
+Run valgrind

@@ -1,0 +1,44 @@
+Major changes in 0.6.0:
+=======================
+Major changes in this releas:
+* Various bugfixes
+* Make build work on arm7
+* Fix build for python 2.5
+* Don't allow video streams on non-primary surface
+* Fix shared memory leaks in client
+* Add some new libspice-server APIs for configuration options
+* Convert SpiceVDIPort API to generic SpiceCharDevice API
+* Add capabilities negotiation to agent
+
+Major changes in 0.5.3:
+=======================
+
+Major changes in this release:
+* Various changes in the network protocol to make it more efficient.
+* New commandline arguments to enable/disable jpeg and zlib-over-glz.
+* Initial work on clipboard sharing added
+* Fix color channel order for mjpegs when connecting to older spice
+   server.
+
+Major changes in 0.5.2:
+=======================
+
+This is the first release of the unstable 0.5.x series leading up to 0.6.
+With this release the API of spice-server is considered stable, but
+the network protocol and QXL PCI ABI are still unstable.
+
+The major changes compared to the 0.4 series are:
+
+* New, more efficient network protocol
+* Support for offscreen surfaces in guest driver
+* New spice-server API
+* A marshalling/demarshalling system that isolates the network
+  protocol parsing from the internal types
+* A PCI parsing and validation layer making it easier to
+  get backwards compatibility, cleaning up the internals ans
+  makes security review easier.
+* WAN support, including lossy compression using jpeg and
+  zlib compression.
+* Easier to build. No more dependencies on forked versions
+  of pixman and cairo. Separate module spice-protocol containing
+  headers used when building drivers and qemu.

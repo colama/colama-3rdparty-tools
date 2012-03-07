@@ -1,0 +1,35 @@
+Major changes in 0.6.3:
+=======================
+* Add support for copy and paste to the agent protocol
+* Add foreign-menu and external controller client protocol headers
+
+Major changes in 0.6.2:
+=======================
+* Skipped to stay in sync with spice
+
+Major changes in 0.6.1:
+=======================
+* Added compat flag for 16bpp commands
+
+Major changes in 0.6.0:
+=======================
+* Initial messages for clipboard sharing
+* Move agent protocol structs from spice to spice-protocol
+* Add capabilities to agent protocol
+
+Major changes in 0.5.3:
+=======================
+
+Network major number changed to 2 to reflect that the network
+protocol is now stable and backwards compatible from this point.
+
+Some vdagent messages for display settings and clipboard sharing
+were added.
+
+Major changes in 0.5.2:
+=======================
+
+This is the first release of the unstable 0.5.x series leading up to 0.6.
+This module was split out of spice so that e.g. drivers and qemu can
+get the types and constants they need without using the full spice
+codebase.
